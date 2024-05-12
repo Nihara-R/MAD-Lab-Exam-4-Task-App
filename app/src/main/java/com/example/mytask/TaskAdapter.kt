@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.recyclerview.widget.RecyclerView
 import com.example.mytask.R
 import com.example.mytask.Task
@@ -44,9 +45,21 @@ class TaskAdapter(private var tasks: List<Task>, context: Context) : RecyclerVie
         }
 
         holder.deleteButton.setOnClickListener {
-            db.deleteTask(currentTask.id) // Corrected line
-            refreshData(db.getAllTasks())
-            Toast.makeText(holder.itemView.context, "Task Deleted", Toast.LENGTH_SHORT).show()
+            // Show a confirmation dialog before deleting the task
+            val builder = AlertDialog.Builder(holder.itemView.context)
+            builder.setTitle("Confirm Delete")
+            builder.setMessage("Are you sure you want to delete this task?")
+            builder.setPositiveButton("Yes") { dialog, which ->
+                // User confirmed deletion
+                db.deleteTask(currentTask.id)
+                refreshData(db.getAllTasks())
+                Toast.makeText(holder.itemView.context, "Task Deleted", Toast.LENGTH_SHORT).show()
+            }
+            builder.setNegativeButton("No") { dialog, which ->
+                // User cancelled deletion
+            }
+            val dialog = builder.create()
+            dialog.show()
         }
     }
 

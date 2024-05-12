@@ -25,7 +25,7 @@
                 android:layout_height="wrap_content"
                 android:text="Title"
                 android:fontFamily="@font/poppins"
-                android:textColor="@color/orange"
+                android:textColor="@color/blackBlue"
                 android:textSize="18sp"
                 android:textStyle="bold">
 
