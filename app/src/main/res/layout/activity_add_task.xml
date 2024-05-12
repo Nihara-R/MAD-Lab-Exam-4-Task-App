@@ -7,7 +7,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".AddTaskActivity"
-    android:padding="16dp">
+    android:padding="16dp"
+    android:background="@drawable/h5">
 
     <TextView
         android:id="@+id/addTaskHeading"
@@ -17,7 +18,7 @@
         android:layout_marginTop="16dp"
         android:fontFamily="@font/poppins"
         android:text="Add Task"
-        android:textColor="@color/orange"
+        android:textColor="@color/blackBlue"
         android:textSize="24sp" />
 
     <ImageView

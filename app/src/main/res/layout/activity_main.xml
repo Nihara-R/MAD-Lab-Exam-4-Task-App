@@ -5,26 +5,28 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@drawable/h11">
 
     <TextView
         android:id="@+id/taskHeading"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="40dp"
         android:fontFamily="@font/poppins"
         android:text="Tasks"
-        android:layout_marginStart="18dp"
-        android:textColor="@color/orange"
+        android:layout_marginStart="35dp"
+        android:textColor="@color/blackBlue"
+        android:textStyle="bold"
         android:textSize="24sp"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/taskRecycleView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="58dp"
-        android:padding="16dp"/>
+        android:layout_height="685dp"
+        android:layout_marginTop="73dp"
+        android:padding="16dp" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/addButton"
@@ -36,7 +38,7 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="49dp"
         android:layout_marginBottom="49dp"
-        android:backgroundTint="@color/orange"
+        android:backgroundTint="@color/white"
         android:src="@drawable/baseline_add_24"
         android:tint="@color/white" />
 
